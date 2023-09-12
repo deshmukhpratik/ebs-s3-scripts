@@ -11,3 +11,7 @@ S3_PREFIX="daily-backups/$(date +\%Y-\%m-\%d)/"
 aws s3 sync "$SOURCE_DIR" "s3://$S3_BUCKET/$S3_PREFIX"
 
 echo "Daily backup completed: $(date)"
+
+
+
+cron -- 0 22 * * * /path/to/your/script.sh
